@@ -1,5 +1,5 @@
 from turtle import Screen
-from right_paddle import Right_Paddle
+from paddle import Paddle
 
 screen = Screen()
 screen.setup(width=800,height=600)
@@ -7,7 +7,8 @@ screen.bgcolor("black")
 screen.title("Pong")
 screen.tracer(0)
 
-right_paddle = Right_Paddle()
+right_paddle = Paddle((350,0))
+left_paddle = Paddle((-350,0))
 screen.update()
 
 screen.listen()
