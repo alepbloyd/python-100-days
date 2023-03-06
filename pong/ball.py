@@ -15,7 +15,8 @@ class Ball(Turtle):
     self.goto(new_x, new_y)
 
   def bounce_top_or_bottom(self):
-    if self.y_movement == 1:
-      self.y_movement = -1
-    elif self.y_movement == -1:
-      self.y_movement = 1
+    self.y_movement *= -1
+
+
+  def bounce_left_or_right(self):
+    self.x_movement *= -1

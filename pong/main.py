@@ -29,5 +29,8 @@ while game_is_on:
   if ball.ycor() > 295 or ball.ycor() < -295:
     ball.bounce_top_or_bottom()
 
+  if ball.distance(right_paddle) < 50 and ball.xcor() > 320 or ball.distance(left_paddle) < 50 and ball.xcor() < -320:
+    ball.bounce_left_or_right()
+
 
 screen.exitonclick()
