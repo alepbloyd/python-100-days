@@ -5,6 +5,7 @@ class Ball(Turtle):
     super().__init__()
     self.x_movement = 1
     self.y_movement = 1
+    self.ball_speed = 0.1
     self.shape("circle")
     self.color("white")
     self.penup()
@@ -17,6 +18,11 @@ class Ball(Turtle):
   def bounce_top_or_bottom(self):
     self.y_movement *= -1
 
-
   def bounce_left_or_right(self):
     self.x_movement *= -1
+    self.ball_speed *= 0.9
+
+  def reset_position(self):
+    self.ball_speed = 0.1
+    self.goto(0,0)
+    self.bounce_left_or_right()
